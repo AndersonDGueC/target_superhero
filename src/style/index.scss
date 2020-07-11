@@ -32,6 +32,11 @@
     align-content: center;
 }
 
+.cards ul li {
+    color:#2A75B3;
+    list-style:none
+}
+
 .card-header {
     background: #ED1D24;
     color: #fff;
@@ -81,6 +86,30 @@
     box-shadow: none;
 }
 
+.btn-card-like {
+    background: #F3D403;
+    color: #fff;
+    border: none;
+}
+
+.btn-card-like:hover {
+    background: #2A75B3;
+    color: #fff;
+    border: none;
+}
+
+.btn-card-like:focus {
+    background: #ED1D24;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+}
+.btn-card-like:active {
+    background: #2A75B3;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+}
 @media screen and (max-width: 960px) {
 }
 

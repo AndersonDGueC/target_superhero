@@ -1,12 +1,22 @@
 import React from 'react';
 import SuperHero from './components/SuperHero'
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
+import CharHero from './components/CharHero';
 
-function App() {
+class App extends React.Component {
+  render(){
   return (
-    <div className="App">
-     <SuperHero/>
-    </div>
+    <div>
+       <BrowserRouter>
+       <Switch>
+         <Route exact path="/" render={()=><SuperHero/>}/>
+         <Route exact path="/:id" render={()=><CharHero/>}/>
+       </Switch>
+       </BrowserRouter>
+      </div>
+     
   );
+          }
 }
 
 export default App;

@@ -59,27 +59,27 @@ const arraux=arr.map((arr)=>{
 
         <Container className='container-cards'>
             
-        <div className='title-places'><h2>SuperHeroes y Villanos</h2></div>
+        <div className='title-places'><h2 style={{color:"#ED1D24"}}>SuperHeroes y Villanos</h2></div>
         <article className="d-flex  justify-content-around">
         <Button className="btn-card-pag" onClick={handleClickPreview}>Anterior</Button>
         <Button className="btn-card-pag" onClick={handleClickNext}>Siguiente</Button>
         </article>    
         <CardDeck className='justify-content-center'>
             {
-                pageHero!==0&&pageHero.map((arr, indx) => {
+                pageHero.length!==0&&pageHero.map((arr, indx) => {
 
 			return (
 			
-                        <CardHero key={indx} image={arr.image.url} name={arr.name} />
+                        <CardHero key={indx} image={arr.image.url} name={arr.name} intelligence={arr.powerstats.intelligence} speed={arr.powerstats.speed} power={arr.powerstats.power} id={arr.id}/>
                     )
                 })
             }
             
         </CardDeck>
-        <article className="d-flex  justify-content-around">
+       { pageHero.length !==0 && <article className="d-flex  justify-content-around">
         <Button className="btn-card-place" onClick={handleClickPreview}>Anterior</Button>
         <Button className="btn-card-place" onClick={handleClickNext}>Siguiente</Button>
-        </article> 
+        </article>} 
     </Container>
 
     )
